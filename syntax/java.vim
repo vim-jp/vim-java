@@ -31,7 +31,7 @@ endif
 
 " some characters that cannot be in a java program (outside a string)
 syn match javaError "[\\@`]"
-syn match javaError "<<<\|\.\.\|=>\|||=\|&&=\|[^-]->\|\*\/"
+syn match javaError "<<<\|\.\.\|=>\|||=\|&&=\|\*\/"
 
 syn match javaOK "\.\.\."
 
