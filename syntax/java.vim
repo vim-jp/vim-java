@@ -1,9 +1,10 @@
 " Vim syntax file
 " Language:	Java
-" Maintainer:	Claudio Fleiner <claudio@fleiner.com>
-" URL:		http://www.fleiner.com/vim/syntax/java.vim
-" Last Change:	2012 Oct 05
-
+" Current Maintainer:	kamichidu <c.kamunagi@gmail.com>
+" Current URL:		http://github.com/vim-jp/vim-java/
+" Previous Maintainer:	Claudio Fleiner <claudio@fleiner.com>
+" Previous URL:		http://www.fleiner.com/vim/syntax/java.vim
+" Last Change:	2015 Feb 28
 " Please check :help java.vim for comments on some of the options available.
 
 " Quit when a syntax file was already loaded
