@@ -109,8 +109,8 @@ if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("ja
   syn cluster javaTop add=javaLangObject
 endif
 
-if filereadable(expand("<sfile>:p:h")."/javaid.vim")
-  source <sfile>:p:h/javaid.vim
+if globpath(&runtimepath, 'syntax/javaid.vim') !=# ''
+  source syntax/javaid.vim
 endif
 
 if exists("java_space_errors")
@@ -154,10 +154,10 @@ JavaHiLink javaCommentCharacter javaCharacter
 
 syn cluster javaTop add=javaComment,javaLineComment
 
-if !exists("java_ignore_javadoc") && main_syntax != 'jsp'
+if !exists("java_ignore_javadoc") && main_syntax != 'jsp' && globpath(&runtimepath, 'syntax/html.vim') !=# ''
   syntax case ignore
   " syntax coloring for javadoc comments (HTML)
-  syntax include @javaHtml <sfile>:p:h/html.vim
+  syntax include @javaHtml syntax/html.vim
   unlet b:current_syntax
   " HTML enables spell checking for all text that is not in a syntax item. This
   " is wrong for Java (all identifiers would be spell-checked), so it's undone
