@@ -74,7 +74,7 @@ syn keyword javaScopeDecl	public protected private abstract
 if exists("java_highlight_java_lang_ids")
   let java_highlight_all=1
 endif
-if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("java_highlight_java_lang") 
+if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("java_highlight_java_lang")
   " java.lang.*
   syn match javaLangClass "\<System\>"
   syn keyword javaR_JavaLang NegativeArraySizeException ArrayStoreException IllegalStateException RuntimeException IndexOutOfBoundsException UnsupportedOperationException ArrayIndexOutOfBoundsException ArithmeticException ClassCastException EnumConstantNotPresentException StringIndexOutOfBoundsException IllegalArgumentException IllegalMonitorStateException IllegalThreadStateException NumberFormatException NullPointerException TypeNotPresentException SecurityException
@@ -110,7 +110,7 @@ if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("ja
 endif
 
 if globpath(&runtimepath, 'syntax/javaid.vim') !=# ''
-  source syntax/javaid.vim
+  runtime syntax/javaid.vim
 endif
 
 if exists("java_space_errors")
